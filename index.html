@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+File: index.html
+Akshat Thapa, UMass Lowell Computer Science, akshat_thapa@student.uml.edu
+Copyright (c) 2023 by Akshat. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated on 6/13/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interactive Multiplication Table</title>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/ico/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Interactive Multiplication Table</h1>
+    <!--Fieldset surrounds input form with border and places header on top.
+    Each input has a placeholder of 0 to show an empty field means a value of 0.-->
+    <fieldset>
+      <legend>All numbers must be between -50 and 50 inclusive.</legend>
+      <form id="mult">
+        <label for="row_begin"> Starting Row Number </label><br />
+        <input
+          type="text"
+          id="row_begin"
+          name="row_begin"
+          placeholder="0"
+        /><br />
+
+        <label for="row_end"> Ending Row Number </label><br />
+        <input type="text" id="row_end" name="row_end" placeholder="0" /><br />
+
+        <label for="col_begin"> Starting Column Number </label><br />
+        <input
+          type="text"
+          id="col_begin"
+          name="col_begin"
+          placeholder="0"
+        /><br />
+
+        <label for="col_end"> Ending Column Number </label><br />
+        <input type="text" id="col_end" name="col_end" placeholder="0" /><br />
+      </form>
+
+      <!--Button does not create table directly. See JS file-->
+      <input type="submit" value="Create Table" onclick="createTable()" />
+
+      <div id="error">
+        <!--Error message appears and deletes when fixed-->
+      </div>
+    </fieldset>
+    <div id="multTab">
+      <!--Creates table when button clicked-->
+    </div>
+
+    <script type="text/javascript" src="js/table.js"></script>
+  </body>
+</html>
